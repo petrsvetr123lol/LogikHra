@@ -44,5 +44,25 @@ namespace LogikHra
                 combinations[i].Draw(e.Graphics, new PointF(10, 10 +i * 1.2F*size),size);
             }
         }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            for (int i = 0; i< combinations.Length; i++)
+            {
+                foreach(var pin in combinations[i].Pins)
+                {
+                    if (pin.Region.IsVisible(e.Location))
+                    {
+                        
+                        pin.State = Pin.PinState.Color1;   
+                        if(pin.State > Pin.PinState.Color6)
+                        {
+                            pin.State = Pin.PinState.Color1;
+                        }
+                    }
+                }
+            }
+            pictureBox1.Refresh();
+        }
     }
 }
