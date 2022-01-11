@@ -14,7 +14,7 @@ namespace LogikHra
             State = PinState.Empty;
         }
         //vykreslování
-        public void Draw(Graphics graphics, PointF location, int size)
+        public void Draw(Graphics graphics, PointF location, float size)
         {
             Brush brush = new SolidBrush(GetColor());
             graphics.FillEllipse(Brushes.Yellow, location.X, location.Y, size, size);

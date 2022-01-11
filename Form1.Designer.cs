@@ -39,13 +39,14 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(331, 368);
+            this.pictureBox1.Size = new System.Drawing.Size(331, 429);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
             // btnEvaluate
             // 
-            this.btnEvaluate.Location = new System.Drawing.Point(12, 386);
+            this.btnEvaluate.Location = new System.Drawing.Point(12, 457);
             this.btnEvaluate.Name = "btnEvaluate";
             this.btnEvaluate.Size = new System.Drawing.Size(155, 51);
             this.btnEvaluate.TabIndex = 1;
@@ -54,18 +55,19 @@
             // 
             // btnNewGame
             // 
-            this.btnNewGame.Location = new System.Drawing.Point(185, 386);
+            this.btnNewGame.Location = new System.Drawing.Point(185, 457);
             this.btnNewGame.Name = "btnNewGame";
             this.btnNewGame.Size = new System.Drawing.Size(158, 51);
             this.btnNewGame.TabIndex = 2;
             this.btnNewGame.Text = "Nová hra";
             this.btnNewGame.UseVisualStyleBackColor = true;
+            this.btnNewGame.Click += new System.EventHandler(this.btnNewGame_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 444);
+            this.ClientSize = new System.Drawing.Size(355, 530);
             this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.btnEvaluate);
             this.Controls.Add(this.pictureBox1);
